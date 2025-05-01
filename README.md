@@ -28,7 +28,8 @@ Add the plugin to your `pubspec.yaml`:
 ```yaml
 dependencies:
   iqchannels:
-    path: ../iqchannels
+    git:
+      url: https://github.com/ShahzodAtabayev/iqchannels-flutter.git
 ```
 
 Then run:

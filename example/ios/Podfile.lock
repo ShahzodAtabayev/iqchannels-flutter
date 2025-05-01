@@ -1,0 +1,91 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - iqchannels (0.0.1):
+    - Flutter
+    - IQChannelsSwift
+  - IQChannelsSwift (2.1.9):
+    - IQChannelsSwift/Controllers (= 2.1.9)
+    - IQChannelsSwift/Database (= 2.1.9)
+    - IQChannelsSwift/Extensions (= 2.1.9)
+    - IQChannelsSwift/Managers (= 2.1.9)
+    - IQChannelsSwift/Models (= 2.1.9)
+    - IQChannelsSwift/Protocols (= 2.1.9)
+    - IQChannelsSwift/ViewModels (= 2.1.9)
+    - IQChannelsSwift/Views (= 2.1.9)
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Controllers (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Database (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Extensions (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Managers (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Models (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Protocols (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/ViewModels (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - IQChannelsSwift/Views (2.1.9):
+    - SDWebImageSwiftUI (= 3.0.4)
+    - SQLite.swift (> 0.13)
+  - SDWebImage (5.21.0):
+    - SDWebImage/Core (= 5.21.0)
+  - SDWebImage/Core (5.21.0)
+  - SDWebImageSwiftUI (3.0.4):
+    - SDWebImage (~> 5.10)
+  - SQLite.swift (0.15.3):
+    - SQLite.swift/standard (= 0.15.3)
+  - SQLite.swift/standard (0.15.3)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - iqchannels (from `.symlinks/plugins/iqchannels/ios`)
+  - IQChannelsSwift (from `https://github.com/iqstore/iqchannels-swift.git`, tag `2.1.9`)
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+    - SDWebImageSwiftUI
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  iqchannels:
+    :path: ".symlinks/plugins/iqchannels/ios"
+  IQChannelsSwift:
+    :git: https://github.com/iqstore/iqchannels-swift.git
+    :tag: 2.1.9
+
+CHECKOUT OPTIONS:
+  IQChannelsSwift:
+    :git: https://github.com/iqstore/iqchannels-swift.git
+    :tag: 2.1.9
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
+  iqchannels: 36590f0bd6e2583a6e763fa64123b3fa14facfb9
+  IQChannelsSwift: 23fb20319d6b1ec1c404cb20df816cd1cdc16345
+  SDWebImage: f84b0feeb08d2d11e6a9b843cb06d75ebf5b8868
+  SDWebImageSwiftUI: 824628d8220906aa101f62b39a7492edd138449d
+  SQLite.swift: 8d054987f02728cc912b0eb5a9659650573a65a2
+
+PODFILE CHECKSUM: 763f74581f6aab4f9742620c25f3e8df8bb95a42
+
+COCOAPODS: 1.16.2

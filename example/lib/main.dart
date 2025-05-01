@@ -18,8 +18,8 @@ class _MyAppState extends State<MyApp> {
   Future<void> _configure(BuildContext context) async {
     try {
       await _iqchannelsPlugin.configure(
-        address: 'https://chatapi.beeline.uz',
-        channel: 'test-segment',
+        address: 'https://your.domain.com',
+        channel: 'channel',
       );
       _showSnackBar(context, 'Configured!');
     } catch (e) {

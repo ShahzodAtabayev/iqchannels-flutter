@@ -10,8 +10,8 @@ void main() {
 
   testWidgets('configure completes without exception', (WidgetTester tester) async {
     await plugin.configure(
-      address: 'https://chatapi.beeline.uz',
-      channel: 'test-segment',
+      address: 'https://your.domain.com',
+      channel: 'channel',
     );
     // If no exception is thrown, test passed
     expect(true, isTrue);

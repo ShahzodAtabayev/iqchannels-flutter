@@ -46,13 +46,28 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
       result(nil)
 
     case "openChat":
-      if let controller = UIApplication.shared.keyWindow?.rootViewController,
-         let chatVC = configurationManager.getViewController() {
-        controller.present(chatVC, animated: true)
+        var rootViewController: UIViewController? = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?.rootViewController
+
+        if rootViewController == nil {
+            // fallback for iOS < 13
+            rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        }
+
+        guard let controller = rootViewController else {
+            result(FlutterError(code: "NO_CONTROLLER", message: "Cannot get rootViewController", details: nil))
+            return
+        }
+
+        let chatVC = configurationManager.getViewController()
+
+        DispatchQueue.main.async {
+            controller.present(chatVC, animated: true, completion: nil)
+        }
+
         result(nil)
-      } else {
-        result(FlutterError(code: "NO_CONTROLLER", message: "Cannot get rootViewController", details: nil))
-      }
 
     case "setPushToken":
       if let args = call.arguments as? [String: Any],

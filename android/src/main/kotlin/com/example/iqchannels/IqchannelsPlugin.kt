@@ -88,7 +88,7 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private fun openChat(styleJson: String?) {
         activity?.let { act ->
             val intent = android.content.Intent(act, ChatActivity::class.java)
-            intent.putExtra("style_json", styleJson)
+            intent.putExtra("styleJson", styleJson)
             act.startActivity(intent)
         }
     }

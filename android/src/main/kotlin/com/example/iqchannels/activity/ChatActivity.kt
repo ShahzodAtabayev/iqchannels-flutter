@@ -8,9 +8,10 @@ import ru.iqchannels.sdk.ui.ChatFragment
 class ChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val styleJson = intent.getStringExtra("style_json")
+        val styleJson = intent.getStringExtra("styleJson")
         val container = android.widget.FrameLayout(this).apply { id = android.R.id.content }
         setContentView(container)
+        print("ssss------s---------------------- $styleJson")
         val fragment = ChatFragment.newInstance(stylesJson = styleJson)
         supportFragmentManager.beginTransaction().replace(android.R.id.content, fragment).commit()
     }

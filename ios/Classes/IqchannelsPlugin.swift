@@ -64,7 +64,7 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
         let chatVC = configurationManager.getViewController()
 
         DispatchQueue.main.async {
-            controller.present(chatVC, animated: true, completion: nil)
+            controller!.present(chatVC, animated: true, completion: nil)
         }
 
         result(nil)

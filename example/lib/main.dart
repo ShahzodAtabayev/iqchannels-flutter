@@ -65,7 +65,9 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _openChat(BuildContext context) async {
     try {
-      await _iqchannelsPlugin.openChat();
+      await _iqchannelsPlugin.openChat(
+        styleJson:
+      );
       _showSnackBar(context, 'Chat opened!');
     } catch (e) {
       _showSnackBar(context, 'Failed to open chat: $e');

@@ -2,8 +2,6 @@ package com.example.iqchannels
 
 import android.app.Activity
 import android.content.Context
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import com.example.iqchannels.activity.ChatActivity
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -14,7 +12,6 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import ru.iqchannels.sdk.app.IQChannels
 import ru.iqchannels.sdk.app.IQChannelsConfig
-import ru.iqchannels.sdk.ui.ChatFragment
 
 class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private lateinit var channel: MethodChannel
@@ -77,7 +74,8 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
             }
 
             "openChat" -> {
-                openChat()
+                val styleJson = call.argument<String>("styleJson")
+                openChat(styleJson = styleJson)
                 result.success(null)
             }
 
@@ -87,9 +85,10 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         }
     }
 
-    private fun openChat() {
+    private fun openChat(styleJson: String?) {
         activity?.let { act ->
             val intent = android.content.Intent(act, ChatActivity::class.java)
+            intent.putExtra("style_json", styleJson)
             act.startActivity(intent)
         }
     }

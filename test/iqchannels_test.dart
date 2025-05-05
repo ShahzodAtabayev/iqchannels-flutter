@@ -50,7 +50,7 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
   }
 
   @override
-  Future<void> openChat() async {
+  Future<void> openChat({String? styleJson}) async {
     openChatCalled = true;
   }
 

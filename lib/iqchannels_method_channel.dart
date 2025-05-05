@@ -45,7 +45,7 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
   }
 
   @override
-  Future<void> openChat() async {
-    await methodChannel.invokeMethod('openChat');
+  Future<void> openChat({String? styleJson}) async {
+    await methodChannel.invokeMethod('openChat', {'styleJson': styleJson});
   }
 }

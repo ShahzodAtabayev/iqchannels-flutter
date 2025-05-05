@@ -25,7 +25,7 @@ class IQChannels {
     return IqchannelsPlatform.instance.logoutAnonymous();
   }
 
-  Future<void> openChat() {
-    return IqchannelsPlatform.instance.openChat();
+  Future<void> openChat({String? styleJson}) {
+    return IqchannelsPlatform.instance.openChat(styleJson: styleJson);
   }
 }

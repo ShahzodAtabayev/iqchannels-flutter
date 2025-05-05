@@ -61,10 +61,13 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
             return
         }
 
-        let chatVC = configurationManager.getViewController()
+        guard let chatVC = configurationManager.getViewController() else {
+            result(FlutterError(code: "NO_CONTROLLER", message: "Cannot get getViewController", details: nil))
+            return
+        }
 
         DispatchQueue.main.async {
-            controller!.present(chatVC, animated: true, completion: nil)
+            controller.present(chatVC, animated: true, completion: nil)
         }
 
         result(nil)

@@ -75,7 +75,8 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
             "openChat" -> {
                 val styleJson = call.argument<String>("styleJson")
-                openChat(styleJson = styleJson)
+                val toolbarTitle = call.argument<String>("toolbarTitle")
+                openChat(styleJson = styleJson, toolbarTitle = toolbarTitle)
                 result.success(null)
             }
 
@@ -85,10 +86,11 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         }
     }
 
-    private fun openChat(styleJson: String?) {
+    private fun openChat(styleJson: String?, toolbarTitle: String?) {
         activity?.let { act ->
             val intent = android.content.Intent(act, ChatActivity::class.java)
-            intent.putExtra("styleJson", styleJson)
+            intent.putExtra(ChatActivity.EXTRA_TITLE, toolbarTitle)
+            intent.putExtra(ChatActivity.STYLE_JSON, styleJson)
             act.startActivity(intent)
         }
     }

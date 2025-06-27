@@ -40,7 +40,7 @@ abstract class IqchannelsPlatform extends PlatformInterface {
     throw UnimplementedError('logoutAnonymous() has not been implemented.');
   }
 
-  Future<void> openChat({String? styleJson}) {
+  Future<void> openChat({String? styleJson, String? appbarTitle}) {
     throw UnimplementedError('openChat() has not been implemented.');
   }
 }

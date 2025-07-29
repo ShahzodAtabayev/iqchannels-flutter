@@ -9,11 +9,18 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
   final methodChannel = const MethodChannel('iqchannels');
 
   @override
-  Future<void> configure({required String address, required String channel}) async {
+  Future<void> configure({required String address, required String channel, String? style, String? language}) async {
     await methodChannel.invokeMethod('configure', {
       'address': address,
       'channel': channel,
+      'style': style,
+      'language': language,
     });
+  }
+
+  @override
+  Future<void> setTheme({required String theme}) async {
+    await methodChannel.invokeMethod('setTheme', {'theme': theme});
   }
 
   @override

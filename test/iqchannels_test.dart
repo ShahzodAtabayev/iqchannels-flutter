@@ -22,7 +22,7 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
   bool? setPushTokenIsHuawei;
 
   @override
-  Future<void> configure({required String address, required String channel}) async {
+  Future<void> configure({required String address, required String channel, String? style, String? language}) async {
     configureCalled = true;
     configureAddress = address;
     configureChannel = channel;
@@ -50,7 +50,7 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
   }
 
   @override
-  Future<void> openChat({String? styleJson,String? appbarTitle}) async {
+  Future<void> openChat({String? styleJson, String? appbarTitle}) async {
     openChatCalled = true;
   }
 
@@ -59,6 +59,12 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
     setPushTokenCalled = true;
     setPushTokenValue = token;
     setPushTokenIsHuawei = isHuawei;
+  }
+
+  @override
+  Future<void> setTheme({required String theme}) {
+    // TODO: implement setTheme
+    throw UnimplementedError();
   }
 }
 

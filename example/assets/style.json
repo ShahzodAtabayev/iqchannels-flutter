@@ -158,7 +158,7 @@
       "light": "#FFC800",
       "dark": "#FFC800"
     },
-    "icon_operator": "https://gas-kvas.com/grafic/uploads/posts/2024-01/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png",
+    "icon_operator": "https://apibeepullite.beeline.uz/files/icons/user.png",
     "system_text": {
       "color": {
         "light": "#888888",
@@ -170,13 +170,37 @@
         "bold": false,
         "italic": true
       }
+    },
+    "status_label": {
+      "color": {
+        "light": "#333333",
+        "dark": "#333333"
+      },
+      "text_size": 10,
+      "text_align": "end",
+      "text_style": {
+        "bold": false,
+        "italic": false
+      }
+    },
+    "title_label": {
+      "color": {
+        "light": "#333333",
+        "dark": "#333333"
+      },
+      "text_size": 16,
+      "text_align": "end",
+      "text_style": {
+        "bold": true,
+        "italic": false
+      }
     }
   },
   "messages": {
     "background_operator": {
       "color": {
-        "light": "#FFFFE0",
-        "dark": "#808080"
+        "light": "#FFFFFF",
+        "dark": "#33404A"
       },
       "border": {
         "size": 0,
@@ -184,13 +208,13 @@
           "light": "#000000",
           "dark": "#000000"
         },
-        "border-radius": 0
+        "border-radius": 8
       }
     },
     "background_client": {
       "color": {
-        "light": "#242729",
-        "dark": "#808080"
+        "light": "#FFD600",
+        "dark": "#FFD600"
       },
       "border": {
         "size": 0,
@@ -198,16 +222,16 @@
           "light": "#000000",
           "dark": "#000000"
         },
-        "border-radius": 0
+        "border-radius": 8
       }
     },
     "text_operator": {
       "color": {
-        "light": "#000000",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
-      "text_align": "center",
+      "text_size": 14,
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -215,11 +239,11 @@
     },
     "text_client": {
       "color": {
-        "light": "#ffffff",
-        "dark": "#FFFFFF"
+        "light": "#333333",
+        "dark": "#333333"
       },
-      "text_size": 10,
-      "text_align": "center",
+      "text_size": 14,
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -227,11 +251,11 @@
     },
     "reply_text_client": {
       "color": {
-        "light": "#ffffff",
-        "dark": "#FFFFFF"
+        "light": "#333333",
+        "dark": "#333333"
       },
       "text_size": 10,
-      "text_align": "center",
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -239,11 +263,11 @@
     },
     "reply_sender_text_client": {
       "color": {
-        "light": "#ffffff",
-        "dark": "#FFFFFF"
+        "light": "#333333",
+        "dark": "#333333"
       },
       "text_size": 10,
-      "text_align": "center",
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -251,11 +275,11 @@
     },
     "reply_text_operator": {
       "color": {
-        "light": "#ffffff",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
       "text_size": 10,
-      "text_align": "center",
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -263,11 +287,11 @@
     },
     "reply_sender_text_operator": {
       "color": {
-        "light": "#ffffff",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
       "text_size": 10,
-      "text_align": "center",
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
@@ -275,7 +299,7 @@
     },
     "text_time_operator": {
       "color": {
-        "light": "#000000",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
       "text_size": 10,
@@ -287,8 +311,8 @@
     },
     "text_time_client": {
       "color": {
-        "light": "#000000",
-        "dark": "#FFFFFF"
+        "light": "#333333",
+        "dark": "#333333"
       },
       "text_size": 10,
       "text_align": "center",
@@ -302,7 +326,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -314,7 +338,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -326,7 +350,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -338,7 +362,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -350,7 +374,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -362,7 +386,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -374,7 +398,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -386,7 +410,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -398,7 +422,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -409,10 +433,10 @@
   "answer": {
     "text_sender": {
       "color": {
-        "light": "#000000",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -424,7 +448,7 @@
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -432,10 +456,10 @@
       }
     },
     "background_text_up_message": {
-      "light": "#FFFACD",
-      "dark": "#808080"
+      "light": "#E2E8EC",
+      "dark": "#5F707D"
     },
-    "icon_cancel": "https://w7.pngwing.com/pngs/21/486/png-transparent-undo-common-toolbar-icon.png",
+    "icon_cancel": "https://apibeepullite.beeline.uz/files/icons/close.png",
     "left_line": {
       "light": "#FF0000",
       "dark": "#FF0000"
@@ -470,7 +494,7 @@
     "icon_file_operator": "https://1000logos.net/wp-content/uploads/2023/01/Google-Docs-logo.png",
     "text_file_size_client": {
       "color": {
-        "light": "#ffffff",
+        "light": "#000000",
         "dark": "#FFFFFF"
       },
       "text_size": 10,
@@ -482,7 +506,7 @@
     },
     "text_file_size_operator": {
       "color": {
-        "light": "#ffffff",
+        "light": "#000000",
         "dark": "#FFFFFF"
       },
       "text_size": 10,
@@ -496,8 +520,8 @@
   "rating": {
     "background_container": {
       "color": {
-        "light": "#FFFACD",
-        "dark": "#808080"
+        "light": "#FFFFFF",
+        "dark": "#33404A"
       },
       "border": {
         "size": 0,
@@ -505,28 +529,28 @@
           "light": "#000000",
           "dark": "#000000"
         },
-        "border-radius": 0
+        "border-radius": 8
       }
     },
     "rating_title": {
       "color": {
-        "light": "#000000",
+        "light": "#333333",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
-      "text_align": "center",
+      "text_size": 14,
+      "text_align": "start",
       "text_style": {
         "bold": false,
         "italic": false
       }
     },
-    "full_star": "https://img2.freepng.ru/20180621/itr/kisspng-business-5-star-probot-artistry-hotel-farah-5b2bdea0157717.8623271415296016960879.jpg",
-    "empty_star": "https://www.downloadclipart.net/large/rating-star-background-png.png",
+    "full_star": "https://apibeepullite.beeline.uz/files/icons/star_fill.png",
+    "empty_star": "https://apibeepullite.beeline.uz/files/icons/star.png",
     "sent_rating": {
       "background_enabled": {
         "color": {
-          "light": "#008080",
-          "dark": "#008080"
+          "light": "#FFC800",
+          "dark": "#FFC800"
         },
         "border": {
           "size": 0,
@@ -534,13 +558,13 @@
             "light": "#000000",
             "dark": "#000000"
           },
-          "border-radius": 0
+          "border-radius": 8
         }
       },
       "background_disabled": {
         "color": {
-          "light": "#B7B7CA",
-          "dark": "#B7B7CA"
+          "light": "#E2E8EC",
+          "dark": "#3C4B56"
         },
         "border": {
           "size": 0,
@@ -548,15 +572,15 @@
             "light": "#000000",
             "dark": "#000000"
           },
-          "border-radius": 0
+          "border-radius": 8
         }
       },
       "text_enabled": {
         "color": {
-          "light": "#ffffff",
-          "dark": "#FFFFFF"
+          "light": "#333333",
+          "dark": "#333333"
         },
-        "text_size": 10,
+        "text_size": 16,
         "text_align": "center",
         "text_style": {
           "bold": false,
@@ -565,10 +589,10 @@
       },
       "text_disabled": {
         "color": {
-          "light": "#ffffff",
+          "light": "#333333",
           "dark": "#FFFFFF"
         },
-        "text_size": 10,
+        "text_size": 16,
         "text_align": "center",
         "text_style": {
           "bold": false,
@@ -579,8 +603,8 @@
     "answer_button": {
       "background_enabled": {
         "color": {
-          "light": "#008080",
-          "dark": "#008080"
+          "light": "#FFC800",
+          "dark": "#FFC800"
         },
         "border": {
           "size": 0,
@@ -588,13 +612,13 @@
             "light": "#000000",
             "dark": "#000000"
           },
-          "border-radius": 0
+          "border-radius": 8
         }
       },
       "background_disabled": {
         "color": {
-          "light": "#B7B7CA",
-          "dark": "#B7B7CA"
+          "light": "#E2E8EC",
+          "dark": "#3C4B56"
         },
         "border": {
           "size": 0,
@@ -602,15 +626,15 @@
             "light": "#000000",
             "dark": "#000000"
           },
-          "border-radius": 0
+          "border-radius": 8
         }
       },
       "text_enabled": {
         "color": {
-          "light": "#ffffff",
-          "dark": "#FFFFFF"
+          "light": "#333333",
+          "dark": "#333333"
         },
-        "text_size": 10,
+        "text_size": 16,
         "text_align": "center",
         "text_style": {
           "bold": false,
@@ -619,10 +643,10 @@
       },
       "text_disabled": {
         "color": {
-          "light": "#ffffff",
+          "light": "#333333",
           "dark": "#FFFFFF"
         },
-        "text_size": 10,
+        "text_size": 16,
         "text_align": "center",
         "text_style": {
           "bold": false,
@@ -710,8 +734,8 @@
     },
     "input_background": {
       "color": {
-        "light": "#ffffff",
-        "dark": "#FFFFFF"
+        "light": "#FFFFFF",
+        "dark": "#2C373F"
       },
       "border": {
         "size": 0,
@@ -719,15 +743,15 @@
           "light": "#000000",
           "dark": "#000000"
         },
-        "border-radius": 0
+        "border-radius": 8
       }
     },
     "input_text": {
       "color": {
-        "light": "#000000",
-        "dark": "#000000"
+        "light": "#2D2D2D",
+        "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "left",
       "text_style": {
         "bold": false,
@@ -739,7 +763,7 @@
         "light": "#000000",
         "dark": "#000000"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
@@ -748,15 +772,15 @@
     }
   },
   "tools_to_message": {
-    "icon_sent": "https://e7.pngegg.com/pngimages/414/329/png-clipart-computer-icons-share-icon-edit-angle-triangle.png",
+    "icon_sent": "https://apibeepullite.beeline.uz/files/icons/telegram.png",
     "background_icon": {
-      "light": "#DEB887",
-      "dark": "#696969"
+      "light": "#ECF1F4",
+      "dark": "#ECF1F4"
     },
-    "background_chat": {
+    "background_input": {
       "color": {
-        "light": "#DEB887",
-        "dark": "#696969"
+        "light": "#FFFFFF",
+        "dark": "#2C373F"
       },
       "border": {
         "size": 0,
@@ -764,22 +788,22 @@
           "light": "#000000",
           "dark": "#000000"
         },
-        "border-radius": 0
+        "border-radius": 8
       }
     },
-    "text_chat": {
+    "text_input": {
       "color": {
         "light": "#000000",
         "dark": "#FFFFFF"
       },
-      "text_size": 10,
+      "text_size": 14,
       "text_align": "center",
       "text_style": {
         "bold": false,
         "italic": false
       }
     },
-    "icon_clip": "https://cdn-icons-png.flaticon.com/512/84/84281.png"
+    "icon_clip": "https://apibeepullite.beeline.uz/files/icons/attach.png"
   },
   "error": {
     "title_error": {

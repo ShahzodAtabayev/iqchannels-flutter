@@ -16,8 +16,12 @@ abstract class IqchannelsPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<void> configure({required String address, required String channel}) {
+  Future<void> configure({required String address, required String channel, String? style, String? language}) {
     throw UnimplementedError('configure() has not been implemented.');
+  }
+
+  Future<void> setTheme({required String theme}) {
+    throw UnimplementedError('setTheme() has not been implemented.');
   }
 
   Future<void> setPushToken(String token, {bool isHuawei = false}) {

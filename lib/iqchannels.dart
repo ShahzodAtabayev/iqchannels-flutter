@@ -1,8 +1,12 @@
 import 'iqchannels_platform_interface.dart';
 
 class IQChannels {
-  Future<void> configure({required String address, required String channel}) {
-    return IqchannelsPlatform.instance.configure(address: address, channel: channel);
+  Future<void> configure({required String address, required String channel, String? style, String? language}) {
+    return IqchannelsPlatform.instance.configure(address: address, channel: channel, style: style, language: language);
+  }
+
+  Future<void> setTheme({required String theme}) {
+    return IqchannelsPlatform.instance.setTheme(theme: theme);
   }
 
   Future<void> setPushToken(String token, {bool isHuawei = false}) {

@@ -1,8 +1,13 @@
 import 'iqchannels_platform_interface.dart';
 
 class IQChannels {
-  Future<void> configure({required String address, required String channel, String? style, String? language}) {
+  Future<void> configure(
+      {required String address, required String channel, String? style, String? language, String? theme}) {
     return IqchannelsPlatform.instance.configure(address: address, channel: channel, style: style, language: language);
+  }
+
+  Future<void> saveLanguageJson({required String fileName, required String language}) {
+    return IqchannelsPlatform.instance.saveLanguageJson(fileName, language);
   }
 
   Future<void> setTheme({required String theme}) {

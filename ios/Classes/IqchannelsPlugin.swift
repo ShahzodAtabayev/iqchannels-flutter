@@ -13,20 +13,59 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch call.method {
+
         case "configure":
             if let args = call.arguments as? [String: Any],
                let address = args["address"] as? String,
                let style = args["style"] as? String,
                let language = args["language"] as? String,
+               let theme = args["theme"] as? String,
                let channelName = args["channel"] as? String {
                 let styleData = style.data(using: .utf8)
                 let languageData = language.data(using: .utf8)
                 let config = IQChannelsConfig(address: address, channels: [channelName], styleJson: styleData, languageJson: languageData)
+                if theme != nil {
+                    if theme == "light" {
+                        configurationManager.setTheme(.light)
+                    } else if theme == "dark" {
+                        configurationManager.setTheme(.dark)
+                    } else {
+                        configurationManager.setTheme(.system)
+                    }
+                }
                 configurationManager.configure(config)
                 result(nil)
             } else {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "address and channel required", details: nil))
             }
+
+        case "saveLanguageJson":
+            guard
+                let args = call.arguments as? [String: Any],
+                let fileName = args["fileName"] as? String,
+                let jsonContent = args["jsonContent"] as? String
+            else {
+                result(FlutterError(code: "INVALID_ARGUMENTS", message: "fileName and jsonContent required", details: nil))
+                return
+            }
+
+            let fileManager = FileManager.default
+            do {
+                let appSupportDir = try fileManager.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                let destinationURL = appSupportDir.appendingPathComponent(fileName)
+
+                // Delete file if exits
+                if fileManager.fileExists(atPath: destinationURL.path) {
+                    try fileManager.removeItem(at: destinationURL)
+                }
+
+                // Write file
+                try jsonContent.write(to: destinationURL, atomically: true, encoding: .utf8)
+                result(nil)
+            } catch {
+                result(FlutterError(code: "WRITE_ERROR", message: "Failed to write file: \(error)", details: nil))
+            }
+
         case "setTheme":
             if let args = call.arguments as? [String: Any],
                let theme = args["theme"] as? String {
@@ -77,7 +116,6 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
             .rootViewController
 
             if rootViewController == nil {
-                // fallback for iOS < 13
                 rootViewController = UIApplication.shared.keyWindow?.rootViewController
             }
 

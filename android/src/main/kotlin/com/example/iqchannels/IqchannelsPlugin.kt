@@ -11,6 +11,7 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import ru.iqchannels.sdk.app.IQChannels
+import ru.iqchannels.sdk.app.UIOptions
 import ru.iqchannels.sdk.app.IQChannelsConfig
 
 class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
@@ -30,7 +31,10 @@ class IqchannelsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
                 val address = call.argument<String>("address")
                 val channelName = call.argument<String>("channel")
                 if (address != null && channelName != null) {
-                    IQChannels.configure(applicationContext, IQChannelsConfig(address, channelName))
+                    IQChannels.configure(
+                        applicationContext,
+                        IQChannelsConfig(address, channelName)
+                    )
                     result.success(null)
                 } else {
                     result.error("INVALID_ARGUMENTS", "address and channel are required", null)

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -9,12 +11,25 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
   final methodChannel = const MethodChannel('iqchannels');
 
   @override
-  Future<void> configure({required String address, required String channel, String? style, String? language}) async {
+  Future<void> configure(
+      {required String address, required String channel, String? style, String? language, String? theme}) async {
     await methodChannel.invokeMethod('configure', {
       'address': address,
       'channel': channel,
       'style': style,
       'language': language,
+      'theme': theme,
+    });
+  }
+
+  @override
+  Future<void> saveLanguageJson(String fileName, String jsonContent) async {
+    if (Platform.isAndroid) {
+      return;
+    }
+    await methodChannel.invokeMethod('saveLanguageJson', {
+      'fileName': fileName,
+      'jsonContent': jsonContent,
     });
   }
 

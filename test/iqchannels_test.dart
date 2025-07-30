@@ -22,7 +22,8 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
   bool? setPushTokenIsHuawei;
 
   @override
-  Future<void> configure({required String address, required String channel, String? style, String? language}) async {
+  Future<void> configure(
+      {required String address, required String channel, String? style, String? language, String? theme}) async {
     configureCalled = true;
     configureAddress = address;
     configureChannel = channel;
@@ -64,6 +65,12 @@ class MockIqchannelsPlatform with MockPlatformInterfaceMixin implements Iqchanne
   @override
   Future<void> setTheme({required String theme}) {
     // TODO: implement setTheme
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> saveLanguageJson(String fileName, String jsonContent) {
+    // TODO: implement saveLanguageJson
     throw UnimplementedError();
   }
 }

@@ -16,8 +16,13 @@ abstract class IqchannelsPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<void> configure({required String address, required String channel, String? style, String? language}) {
+  Future<void> configure(
+      {required String address, required String channel, String? style, String? language, String? theme}) {
     throw UnimplementedError('configure() has not been implemented.');
+  }
+
+  Future<void> saveLanguageJson(String fileName, String jsonContent) {
+    throw UnimplementedError('saveLanguageJson() has not been implemented.');
   }
 
   Future<void> setTheme({required String theme}) {

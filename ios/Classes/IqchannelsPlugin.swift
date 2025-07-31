@@ -17,10 +17,10 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
         case "configure":
             if let args = call.arguments as? [String: Any],
                let address = args["address"] as? String,
-               let style = args["style"] as? String,
-               let language = args["language"] as? String,
-               let theme = args["theme"] as? String,
                let channelName = args["channel"] as? String {
+                let style = args["style"] as? String
+                let language = args["language"] as? String
+                let theme = args["theme"] as? String
                 let styleData = style.data(using: .utf8)
                 let languageData = language.data(using: .utf8)
                 let config = IQChannelsConfig(address: address, channels: [channelName], styleJson: styleData, languageJson: languageData)

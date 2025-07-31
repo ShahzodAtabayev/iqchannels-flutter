@@ -21,15 +21,16 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
                 let style = args["style"] as? String
                 let language = args["language"] as? String
                 let theme = args["theme"] as? String
-                let styleData = style.data(using: .utf8)
-                let languageData = language.data(using: .utf8)
+                let styleData = style.flatMap { $0.data(using: .utf8) }
+                let languageData = language.flatMap { $0.data(using: .utf8) }
                 let config = IQChannelsConfig(address: address, channels: [channelName], styleJson: styleData, languageJson: languageData)
-                if theme != nil {
-                    if theme == "light" {
+                if let theme = theme {
+                    switch theme {
+                    case "light":
                         configurationManager.setTheme(.light)
-                    } else if theme == "dark" {
+                    case "dark":
                         configurationManager.setTheme(.dark)
-                    } else {
+                    default:
                         configurationManager.setTheme(.system)
                     }
                 }
@@ -38,6 +39,7 @@ public class IqchannelsPlugin: NSObject, FlutterPlugin {
             } else {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "address and channel required", details: nil))
             }
+
 
         case "saveLanguageJson":
             guard

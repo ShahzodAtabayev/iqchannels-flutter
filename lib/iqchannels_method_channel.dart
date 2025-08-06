@@ -35,6 +35,9 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
 
   @override
   Future<void> setTheme({required String theme}) async {
+    if (Platform.isAndroid) {
+      return;
+    }
     await methodChannel.invokeMethod('setTheme', {'theme': theme});
   }
 

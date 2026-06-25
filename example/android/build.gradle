@@ -1,3 +1,9 @@
+def localProps = new Properties()
+def localPropsFile = file("local.properties")
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
+}
+
 allprojects {
     repositories {
         google()
@@ -7,8 +13,8 @@ allprojects {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/iqstore/iqchannels-kotlin")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
-                password = project.findProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
+                username = localProps.getProperty("gpr.user") ?: System.getenv("GPR_USER")
+                password = localProps.getProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
             }
         }
     }

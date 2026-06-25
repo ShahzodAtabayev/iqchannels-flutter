@@ -83,7 +83,7 @@ void main() {
   });
 
   test('configure calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -95,7 +95,7 @@ void main() {
   });
 
   test('setPushToken calls platform instance with correct values', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -107,7 +107,7 @@ void main() {
   });
 
   test('login calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -118,7 +118,7 @@ void main() {
   });
 
   test('logout calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -128,7 +128,7 @@ void main() {
   });
 
   test('loginAnonymous calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -138,7 +138,7 @@ void main() {
   });
 
   test('logoutAnonymous calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 
@@ -148,7 +148,7 @@ void main() {
   });
 
   test('openChat calls platform instance', () async {
-    final plugin = IQChannels();
+    final plugin = IQChannels.instance;
     final mockPlatform = MockIqchannelsPlatform();
     IqchannelsPlatform.instance = mockPlatform;
 

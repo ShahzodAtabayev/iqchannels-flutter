@@ -6,7 +6,7 @@ import 'package:iqchannels/iqchannels.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  final plugin = IQChannels();
+  final plugin = IQChannels.instance;
 
   testWidgets('configure completes without exception', (WidgetTester tester) async {
     await plugin.configure(

@@ -11,8 +11,13 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
   final methodChannel = const MethodChannel('iqchannels');
 
   @override
-  Future<void> configure(
-      {required String address, required String channel, String? style, String? language, String? theme}) async {
+  Future<void> configure({
+    required String address,
+    required String channel,
+    String? style,
+    String? language,
+    String? theme,
+  }) async {
     await methodChannel.invokeMethod('configure', {
       'address': address,
       'channel': channel,
@@ -27,10 +32,7 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
     if (Platform.isAndroid) {
       return;
     }
-    await methodChannel.invokeMethod('saveLanguageJson', {
-      'fileName': fileName,
-      'jsonContent': jsonContent,
-    });
+    await methodChannel.invokeMethod('saveLanguageJson', {'fileName': fileName, 'jsonContent': jsonContent});
   }
 
   @override
@@ -43,10 +45,7 @@ class MethodChannelIqchannels extends IqchannelsPlatform {
 
   @override
   Future<void> setPushToken(String token, {bool isHuawei = false}) async {
-    await methodChannel.invokeMethod('setPushToken', {
-      'token': token,
-      'isHuawei': isHuawei,
-    });
+    await methodChannel.invokeMethod('setPushToken', {'token': token, 'isHuawei': isHuawei});
   }
 
   @override

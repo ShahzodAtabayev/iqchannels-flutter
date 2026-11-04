@@ -1,11 +1,11 @@
 name: iqchannels
-version: 0.0.1
+version: 0.1.0
 homepage: "none"
 description: "A new Flutter project."
 
 environment:
-  sdk: ">=3.11.0 <4.0.0"
-  flutter: ">=3.41.0"
+  sdk: ">=3.13.0 <4.0.0"
+  flutter: ">=3.47.0"
 
 dependencies:
   flutter:

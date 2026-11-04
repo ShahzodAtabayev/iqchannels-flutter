@@ -1,0 +1,57 @@
+# When this file exists, pub ignores the root .gitignore,
+# so its rules are repeated here.
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ / VS Code
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# Flutter/Dart/Pub
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Android
+**/.gradle/
+**/.kotlin/
+**/.cxx/
+**/local.properties
+**/key.properties
+**/*.keystore
+**/*.jks
+**/GeneratedPluginRegistrant.*
+
+# iOS
+**/Pods/
+**/Podfile.lock
+**/xcuserdata/
+**/.symlinks/
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/Flutter/ephemeral/
+**/DerivedData/
+
+# Example build artifacts
+/example/build/
+/example/pubspec.lock
+
+# Swift Package Manager
+**/.build/
+**/.swiftpm/

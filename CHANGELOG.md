@@ -1,3 +1,7 @@
+## 0.1.1
+
+* iOS (SPM): cap SQLite.swift below 0.17.0 — iqchannels-swift 2.2.2 targets iOS 14 and takes SQLite.swift unbounded, while 0.17.0+ requires iOS 15 (Xcode "Target Integrity" build error).
+
 ## 0.1.0
 
 * Android: migrate Gradle build scripts to Kotlin DSL (`.gradle.kts`).

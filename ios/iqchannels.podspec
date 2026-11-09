@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iqchannels'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC
 A new Flutter project.

@@ -13,14 +13,17 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework"),
-        .package(url: "https://github.com/iqstore/iqchannels-swift.git", exact: "2.2.2")
+        .package(url: "https://github.com/iqstore/iqchannels-swift.git", exact: "2.2.2"),
+        // iqchannels-swift supports iOS 14 but takes SQLite.swift without an upper bound; 0.17.0+ requires iOS 15.
+        .package(url: "https://github.com/stephencelis/SQLite.swift.git", "0.13.0"..<"0.17.0")
     ],
     targets: [
         .target(
             name: "iqchannels",
             dependencies: [
                 .product(name: "FlutterFramework", package: "FlutterFramework"),
-                .product(name: "IQChannelsSwift", package: "iqchannels-swift")
+                .product(name: "IQChannelsSwift", package: "iqchannels-swift"),
+                .product(name: "SQLite", package: "SQLite.swift")
             ],
             resources: [
                 .process("PrivacyInfo.xcprivacy")
